@@ -1,0 +1,28 @@
+npm i --save-dev nodemon ->  to install in dev dependencies.
+
+
+mongoose.connect(url, {object that have methods}).then(()).catch(());
+
+mongoose.Schema({takes object}),  return a Schema
+
+
+http://localhost:8009/create/user
+http://localhost:8009 -> api url, same for a server
+/create/user -> endpoint
+
+
+
+if you are accessing request on two different port, when frontend is on other port and backend is on other.
+Then browser doesn't allowed this, give a issue due to security reasons, that why we  have to use cors
+Browser block the request and give reason of security issue.
+So we use cors to resolve this issue.
+
+
+
+
+new version of express doesn't know how to handle post request
+so we use body-parser to handle the post request 
+all the request that contains the body, they all need this
+so, we have to use body-parser and make JSON format extended true, so that is starts parsing the json format
+Also we parse the url, bodyParser.urlEncodded({ extended: true }) 
+To handle the empty spaces
