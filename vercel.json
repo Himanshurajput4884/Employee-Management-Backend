@@ -2,7 +2,7 @@
     "version":2,
     "name":"Employee-management",
     "builds": [
-        {"src":"server.js", "use":"@vercel/nod"}
+        {"src":"server.js", "use":"@vercel/node"}
     ],
     "routes":[
         {"src":"/(.*)", "dest":"/server.js"}
