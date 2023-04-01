@@ -16,7 +16,7 @@ app.use(router);
 // app.use(cors());
 // app.use(bodyParser.json({ extended: true }));
 // app.use(bodyParser.urlencoded({ extended: true }));
-const PORT = 8009;
+const PORT = process.env.PORT;
 
 app.listen(PORT, ()=>{
     console.log(`Server is running on port ${PORT}`);
