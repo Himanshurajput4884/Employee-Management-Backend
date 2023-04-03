@@ -11,7 +11,7 @@ dotenv.config();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: "http://localhost:3000/"}));
+// app.use(cors({ origin: "http://localhost:3000/"}));
 app.use(router);
 // app.use(function(req, res, next) {
 //     res.header("Access-Control-Allow-Origin", "*");
@@ -19,10 +19,10 @@ app.use(router);
 //     next();
 //   });
 
-// app.use(cors());
+app.use(cors());
 // app.use(bodyParser.json({ extended: true }));
 // app.use(bodyParser.urlencoded({ extended: true }));
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8009;
 
 app.listen(PORT, ()=>{
     console.log(`Server is running on port ${PORT}`);
