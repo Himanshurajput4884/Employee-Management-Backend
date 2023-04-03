@@ -29,7 +29,7 @@ const login = async (req, res) =>{
                     validUser,
                     token
                 }
-                // console.log("\nLogin page: ", result);
+                console.log("\nLogin page: ", result);
                 res.status(201).json({ status:201, result});
             }
         }

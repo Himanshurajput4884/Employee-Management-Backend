@@ -11,15 +11,19 @@ dotenv.config();
 
 app.use(express.json());
 app.use(cookieParser());
-// app.use(cors({ origin: "http://localhost:3000/"}));
-app.use(router);
+app.use(cors());
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "http://localhost:3000");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
-  });
+});
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "https://employee-management-backend-tau.vercel.app/");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
-// app.use(cors());
+app.use(router);
 // app.use(bodyParser.json({ extended: true }));
 // app.use(bodyParser.urlencoded({ extended: true }));
 const PORT = process.env.PORT || 8009;
